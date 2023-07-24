@@ -1,95 +1,79 @@
-## Modular Inverse Cipher Decryption Program
+# Modular Inverse Solver
 [Modular_inverse_Solver.py](https://github.com/MolCoteH/Crypto/blob/main/Modular_inverse_Solver.py)
-### Overview
 
-This program implements two methods for decrypting a ciphertext that has been encrypted using a modular inverse cipher. The ciphertext is input as a list of numbers. The user selects the decryption method and provides the modulus used for encryption. The program then decrypts the message and prints the plaintext.
+This program allows you to encrypt and decrypt messages using modular arithmetic. It works by mapping each character in the message to a number based on its position in the alphabet, performing modular arithmetic operations on those numbers, and then mapping the result back to a character.
 
-### Input
+## Usage 
 
-The program takes the following input from the user:
+1. Enter your message as a space-separated list of numbers. For example: `12 15 18 21`
 
-1. Ciphertext as a space-separated list of numbers (e.g. "12 24 16")
+2. Enter the modulus - this is the number you will perform the modular arithmetic with. For example: `26` 
 
-2. Modulus used for encryption as an integer (e.g. 27) 
+3. Choose whether to use uppercase letters by entering `y` or `n`.
 
-3. Choice of decryption method (1 or 2)
+4. (Optional) Enter a number to start the modular inverse from. Leave blank to use default of 0.
 
-4. Whether to use uppercase letters (y/n)
+5. The program will print out the encrypted/decrypted message.
 
-### Decryption Methods 
+## Examples
 
-The program implements two modular inverse decryption methods:
-
-1. Normal modular inverse calculation starting from 0. This computes (num * modinv(num, mod)) % mod for each number.
-
-2. Modular inverse starting from -1. This computes (num % mod)^-1 % mod for each number. 
-
-### Usage
-
-To use the program:
-
-1. Enter the ciphertext numbers when prompted
-
-2. Enter the modulus used for encryption 
-
-3. Select decryption method 1 or 2
-
-4. Specify whether to use uppercase letters (y/n)
-
-The program will then print the decrypted plaintext message.
-
-### Examples
-
-Here are 5 examples of using the program:
+Encrypting "hello" with a modulus of 26:
 
 ```
-Enter message: 12 24 16
-Enter modulus: 27
-Enter 1 or 2: 1
-Use uppercase? (y/n): n
+Enter your message: 8 5 12 12 15
+Enter the modulus: 26
+Use uppercase letters? (y/n): n
 
-12 24 16 
-cat
+8 5 12 12 15  
+
+hello
 ```
 
-```
-Enter message: 15 18 22
-Enter modulus: 25  
-Enter 1 or 2: 2
-Use uppercase? (y/n): y
+Decrypting the message from above by starting the modular inverse at 13:
 
-15 18 22 
-DOG
-```
+``` 
+Enter your message: 8 5 12 12 15
+Enter the modulus: 26 
+Use uppercase letters? (y/n): n
+Start modular inverse from: 13
 
-```
-Enter message: 20 17 5
-Enter modulus: 29
-Enter 1 or 2: 1 
-Use uppercase? (y/n): n
+6 10 18 18 22  
 
-20 17 5
-tub
+hello
 ```
 
-```
-Enter message: 18 15 21 11
-Enter modulus: 27
-Enter 1 or 2: 2
-Use uppercase? (y/n): y
-
-18 15 21 11
-HELLO
-```
+Using a modulus of 35 to encrypt "attack at dawn":
 
 ```
-Enter message: 7 15 23 11 14 
-Enter modulus: 33
-Enter 1 or 2: 1
-Use uppercase? (y/n): n
+Enter your message: 1 20 20 1 3 11   4 20   4 1 22 14
+Enter the modulus: 35
+Use uppercase letters? (y/n): n
 
-7 15 23 11 14
-happy
+1 20 20 1 3 11  4 20  4 1 22 14
+
+attack at dawn
 ```
 
-This covers the key steps for using the modular inverse cipher decryption program with detailed instructions and examples. Let me know if you need any clarification or have additional questions!
+Encrypting a message with uppercase letters:
+
+```
+Enter your message: 15 18 15
+Enter modulus: 26
+Use uppercase letters? (y/n): y 
+
+15 18 15
+
+OIL
+```
+
+Using a large modulus to encrypt a longer message:
+
+```
+Enter your message: 20 8 5   12 5   20 8 15   19 15 4 5   19 8 5   13 15 4 21 12 1 18   19 15 15 12
+Enter modulus: 100
+Use uppercase letters? (y/n): n
+
+20 8 5   12 5   20 8 15   19 15 4 5   19 8 5   13 15 4 21 12 1 18   19 15 15 12 
+
+use the modular tool
+```
