@@ -1,5 +1,5 @@
 ## Modular Inverse Cipher Decryption Program
-(Modular_inverse_Solver.py)[https://github.com/MolCoteH/Crypto/blob/main/Modular_inverse_Solver.py]
+[Modular_inverse_Solver.py](https://github.com/MolCoteH/Crypto/blob/main/Modular_inverse_Solver.py)
 ### Overview
 
 This program implements two methods for decrypting a ciphertext that has been encrypted using a modular inverse cipher. The ciphertext is input as a list of numbers. The user selects the decryption method and provides the modulus used for encryption. The program then decrypts the message and prints the plaintext.
