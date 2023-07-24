@@ -11,7 +11,7 @@ This program allows you to encrypt and decrypt messages using modular arithmetic
 
 3. Choose whether to use uppercase letters by entering `y` or `n`.
 
-4. (Optional) Enter a number to start the modular inverse from. Leave blank to use default of 0.
+4. (Optional) Enter a number to start the modular inverse from. Leave blank to use default of 0. (You can also use negative numbers like -1)
 
 5. The program will print out the encrypted/decrypted message.
 
@@ -29,29 +29,30 @@ Use uppercase letters? (y/n): n
 hello
 ```
 
-Decrypting the message from above by starting the modular inverse at 13:
+Decrypting the message from above by starting the modular inverse at 41:
 
 ``` 
-Enter your message: 8 5 12 12 15
-Enter the modulus: 26 
+Enter your message: 432 331 192 108 180 50 231 188 105 51 364 168 344 195 297 342 292 198 448 62 236 342 63 
+Enter the modulus: 41
 Use uppercase letters? (y/n): n
-Start modular inverse from: 13
+Start modular inverse from: -1
 
-6 10 18 18 22  
+27 13 21 29 17 31 29 11 24 36 7 30 17 3 36 2 32 34 26 1 3 2 27 
 
-hello
+1nv3r53ly_h4rd_c680bdc1
 ```
 
-Using a modulus of 35 to encrypt "attack at dawn":
+Using a modulus of 37 to encrypt "r0und_n_r0und_79c18fb3":
 
 ```
-Enter your message: 1 20 20 1 3 11   4 20   4 1 22 14
-Enter the modulus: 35
+Enter your message: 128 322 353 235 336 73 198 332 202 285 57 87 262 221 218 405 335 101 256 227 112 140
+Enter the modulus: 37
 Use uppercase letters? (y/n): n
+Start modular inverse from (leave blank for default, 0 for normal): 0
 
-1 20 20 1 3 11  4 20  4 1 22 14
+17 26 20 13 3 36 13 36 17 26 20 13 3 36 33 35 2 27 34 5 1 29 
 
-attack at dawn
+r0und_n_r0und_79c18fb3
 ```
 
 Encrypting a message with uppercase letters:
